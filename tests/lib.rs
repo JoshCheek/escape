@@ -18,11 +18,11 @@ fn it_uses_common_escaped_chars_for_7_13() {
              "\x07\x08\x09\x0A\x0B\x0C\x0D");
 }
 
-/* #[test] */
-/* fn it_hex_escapes_14_26() { */
-/*   escapes_to("\\x0E\\x0F\\x10\\x11\\x12\\x13\\x14\\x15\\x16\\x17\\x18\\x19\\x1A", */
-/*              "\x0E\x0F\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1A"); */
-/* } */
+#[test]
+fn it_hex_escapes_14_26() {
+  escapes_to("\\x0E\\x0F\\x10\\x11\\x12\\x13\\x14\\x15\\x16\\x17\\x18\\x19\\x1A",
+             "\x0E\x0F\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1A");
+}
 
 /* #[test] */
 /* fn it_uses_escaped_e_for_27() { */
