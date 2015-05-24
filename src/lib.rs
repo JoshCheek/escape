@@ -7,21 +7,14 @@ pub fn escape_string(str:&str) -> String {
 }
 
 pub fn escape_char(c:char) -> String {
-  match c {
-    '\u{0}' => { "\\x00".to_string() },
-    '\u{1}' => { "\\x01".to_string() },
-    '\u{2}' => { "\\x02".to_string() },
-    '\u{3}' => { "\\x03".to_string() },
-    '\u{4}' => { "\\x04".to_string() },
-    '\u{5}' => { "\\x05".to_string() },
-    '\u{6}' => { "\\x06".to_string() },
-    '\u{7}' => { "\\a".to_string()   },
-    '\u{8}' => { "\\b".to_string()   },
-    '\u{9}' => { "\\t".to_string()   },
-    '\u{a}' => { "\\n".to_string()   },
-    '\u{b}' => { "\\v".to_string()   },
-    '\u{c}' => { "\\f".to_string()   },
-    '\u{d}' => { "\\r".to_string()   },
-    _       => { format!("NOTHING FOR {:?}", c) },
-  }
+  let cu32 = c as u32;
+  if      cu32 <  7  { format!("\\x0{}", c as u32) }
+  else if cu32 == 7  { "\\a".to_string() }
+  else if cu32 == 8  { "\\b".to_string() }
+  else if cu32 == 9  { "\\t".to_string() }
+  else if cu32 == 10 { "\\n".to_string() }
+  else if cu32 == 11 { "\\v".to_string() }
+  else if cu32 == 12 { "\\f".to_string() }
+  else if cu32 == 13 { "\\r".to_string() }
+  else { format!("NOTHING FOR {:?}", c) }
 }
