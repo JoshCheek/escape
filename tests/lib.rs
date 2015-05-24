@@ -47,10 +47,10 @@ fn it_uses_digits_for_48_57() {
              "\x30\x31\x32\x33\x34\x35\x36\x37\x38\x39");
 }
 
-/* #[test] */
-/* fn it_uses_common_symbols_for_58_64() { */
-/*   escapes_to(":;<=>?@", "\x3A\x3B\x3C\x3D\x3E\x3F\x40"); */
-/* } */
+#[test]
+fn it_uses_common_symbols_for_58_64() {
+  escapes_to(":;<=>?@", "\x3A\x3B\x3C\x3D\x3E\x3F\x40");
+}
 
 /* #[test] */
 /* fn it_uses_uppercase_letters_for_65_90() { */
