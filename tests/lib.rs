@@ -12,11 +12,11 @@ fn it_hex_escapes_0_through_6_function() {
              "\x00\x01\x02\x03\x04\x05\x06");
 }
 
-/* #[test] */
-/* fn it_uses_common_escaped_chars_for_7_13() { */
-/*   escapes_to("\\a\\b\\t\\n\\v\\f\\r", */
-/*              "\x07\x08\x09\x0A\x0B\x0C\x0D"); */
-/* } */
+#[test]
+fn it_uses_common_escaped_chars_for_7_13() {
+  escapes_to("\\a\\b\\t\\n\\v\\f\\r",
+             "\x07\x08\x09\x0A\x0B\x0C\x0D");
+}
 
 /* #[test] */
 /* fn it_hex_escapes_14_26() { */
