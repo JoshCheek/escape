@@ -29,11 +29,11 @@ fn it_uses_escaped_e_for_27() {
   escapes_to("\\e", "\x1B");
 }
 
-/* #[test] */
-/* fn it_hex_escapes_28_31() { */
-/*   escapes_to("\\x1C\\x1D\\x1E\\x1F", */
-/*              "\x1C\x1D\x1E\x1F"); */
-/* } */
+#[test]
+fn it_hex_escapes_28_31() {
+  escapes_to("\\x1C\\x1D\\x1E\\x1F",
+             "\x1C\x1D\x1E\x1F");
+}
 
 /* #[test] */
 /* fn it_uses_common_symbols_for_32_47() { */
