@@ -1,0 +1,13 @@
+[package]
+name = "inspect"
+version = "0.0.1"
+authors = ["Josh Cheek <josh.cheek@gmail.com>"]
+
+description = "Inspects strings and command-line things"
+repository = "https://github.com/JoshCheek/inspect"
+readme = "./README.md"
+keywords = ["inspect"]
+
+license = "MIT"
+
+[dev-dependencies]
