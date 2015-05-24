@@ -35,11 +35,11 @@ fn it_hex_escapes_28_31() {
              "\x1C\x1D\x1E\x1F");
 }
 
-/* #[test] */
-/* fn it_uses_common_symbols_for_32_47() { */
-/*   escapes_to(" !\"#$%&'()*+,-./", */
-/*              "\x20\x21\x22\x23\x24\x25\x26\x27\x28\x29\x2A\x2B\x2C\x2D\x2E\x2F"); */
-/* } */
+#[test]
+fn it_uses_common_symbols_for_32_47() {
+  escapes_to(" !\"#$%&'()*+,-./",
+             "\x20\x21\x22\x23\x24\x25\x26\x27\x28\x29\x2A\x2B\x2C\x2D\x2E\x2F");
+}
 
 /* #[test] */
 /* fn it_uses_digits_for_48_57() { */
