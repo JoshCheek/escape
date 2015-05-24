@@ -24,10 +24,10 @@ fn it_hex_escapes_14_26() {
              "\x0E\x0F\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1A");
 }
 
-/* #[test] */
-/* fn it_uses_escaped_e_for_27() { */
-/*   escapes_to("\\e", "\x1B"); */
-/* } */
+#[test]
+fn it_uses_escaped_e_for_27() {
+  escapes_to("\\e", "\x1B");
+}
 
 /* #[test] */
 /* fn it_hex_escapes_28_31() { */
