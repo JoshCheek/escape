@@ -41,11 +41,11 @@ fn it_uses_common_symbols_for_32_47() {
              "\x20\x21\x22\x23\x24\x25\x26\x27\x28\x29\x2A\x2B\x2C\x2D\x2E\x2F");
 }
 
-/* #[test] */
-/* fn it_uses_digits_for_48_57() { */
-/*   escapes_to("0123456789", */
-/*              "\x30\x31\x32\x33\x34\x35\x36\x37\x38\x39"); */
-/* } */
+#[test]
+fn it_uses_digits_for_48_57() {
+  escapes_to("0123456789",
+             "\x30\x31\x32\x33\x34\x35\x36\x37\x38\x39");
+}
 
 /* #[test] */
 /* fn it_uses_common_symbols_for_58_64() { */
