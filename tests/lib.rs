@@ -58,10 +58,10 @@ fn it_uses_uppercase_letters_for_65_90() {
              "\x41\x42\x43\x44\x45\x46\x47\x48\x49\x4A\x4B\x4C\x4D\x4E\x4F\x50\x51\x52\x53\x54\x55\x56\x57\x58\x59\x5A");
 }
 
-/* #[test] */
-/* fn it_uses_common_symbols_for_91_96() { */
-/*   escapes_to("[\\]^_`", "\x5B\x5C\x5D\x5E\x5F\x60"); */
-/* } */
+#[test]
+fn it_uses_common_symbols_for_91_96() {
+  escapes_to("[\\]^_`", "\x5B\x5C\x5D\x5E\x5F\x60");
+}
 
 /* #[test] */
 /* fn it_uses_lowercase_letters_for_97_122() { */
