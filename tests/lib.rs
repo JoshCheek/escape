@@ -79,7 +79,7 @@ fn it_hex_escapes_127() {
   escapes_to("\\x7F", "\x7F");
 }
 
-/* #[test] */
-/* fn it_does_not_escape_unicode_characters() { */
-/*   escapes_to("¡™£", "¡™£"); */
-/* } */
+#[test]
+fn it_does_not_escape_unicode_characters() {
+  escapes_to("¡™£", "¡™£");
+}

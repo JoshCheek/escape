@@ -21,5 +21,5 @@ pub fn escape_char(c:char) -> String {
   else if cu32 <   32 { format!("\\x{:02X}", cu32) }
   else if cu32 <  127 { c.to_string() }
   else if cu32 == 127 { format!("\\x{:02X}", cu32) }
-  else { format!("NOTHING FOR {:?}", c) }
+  else { c.to_string() }
 }
