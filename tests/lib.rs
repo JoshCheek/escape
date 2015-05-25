@@ -2,7 +2,7 @@ extern crate inspect;
 use inspect::{escape_string};
 
 fn escapes_to(expected:&str, to_escape:&str) {
-  assert_eq!(escape_string(to_escape),
+  assert_eq!(escape_string(to_escape.to_string()),
             expected.to_string());
 }
 

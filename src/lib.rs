@@ -1,4 +1,4 @@
-pub fn escape_string(str:&str) -> String {
+pub fn escape_string(str:String) -> String {
   str.chars()
      .map(escape_char)
      .fold(String::new(), |a, b| { a + &b })
