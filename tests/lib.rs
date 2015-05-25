@@ -74,10 +74,10 @@ fn it_uses_common_symbols_for_123_126() {
   escapes_to("{|}~", "\x7B\x7C\x7D\x7E");
 }
 
-/* #[test] */
-/* fn it_hex_escapes_127() { */
-/*   escapes_to("\\x7F", "\x7F"); */
-/* } */
+#[test]
+fn it_hex_escapes_127() {
+  escapes_to("\\x7F", "\x7F");
+}
 
 /* #[test] */
 /* fn it_does_not_escape_unicode_characters() { */
