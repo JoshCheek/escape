@@ -69,10 +69,10 @@ fn it_uses_lowercase_letters_for_97_122() {
              "\x61\x62\x63\x64\x65\x66\x67\x68\x69\x6A\x6B\x6C\x6D\x6E\x6F\x70\x71\x72\x73\x74\x75\x76\x77\x78\x79\x7A");
 }
 
-/* #[test] */
-/* fn it_uses_common_symbols_for_123_126() { */
-/*   escapes_to("{|}~", "\x7B\x7C\x7D\x7E"); */
-/* } */
+#[test]
+fn it_uses_common_symbols_for_123_126() {
+  escapes_to("{|}~", "\x7B\x7C\x7D\x7E");
+}
 
 /* #[test] */
 /* fn it_hex_escapes_127() { */
