@@ -1,12 +1,12 @@
 extern crate escape;
-use escape::{escape_string};
-use std::io::BufRead;
+use escape::{escape_string, escape_stream};
 
 pub fn main() {
-  let stdin = std::io::stdin();
-  let lock  = stdin.lock();
-  for result in lock.lines() {
-    let line = result.unwrap();
-    println!("\"{}\"", escape_string(line));
-  }
+    let instream  = std::io::stdin();
+    let inlock    = &mut instream.lock();
+
+    let outstream = std::io::stdout();
+    let outlock   = &mut outstream.lock();
+
+    escape_stream(inlock, outlock);
 }
