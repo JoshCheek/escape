@@ -1,12 +1,12 @@
 [package]
-name = "inspect"
+name = "escape"
 version = "0.0.1"
 authors = ["Josh Cheek <josh.cheek@gmail.com>"]
 
-description = "Inspects strings and command-line things"
+description = "Escapes each line of stdin and prints it out"
 repository = "https://github.com/JoshCheek/inspect"
 readme = "./README.md"
-keywords = ["inspect"]
+keywords = ["escape", "inspect"]
 
 license = "MIT"
 

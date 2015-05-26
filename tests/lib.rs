@@ -1,5 +1,5 @@
-extern crate inspect;
-use inspect::{escape_string};
+extern crate escape;
+use escape::{escape_string};
 
 fn escapes_to(expected:&str, to_escape:&str) {
   assert_eq!(escape_string(to_escape.to_string()),

@@ -1,5 +1,5 @@
-extern crate inspect;
-use inspect::{escape_string};
+extern crate escape;
+use escape::{escape_string};
 use std::io::BufRead;
 
 pub fn main() {
