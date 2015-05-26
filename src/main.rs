@@ -1,5 +1,5 @@
 extern crate escape;
-use escape::{escape_string, escape_stream};
+use escape::{escape_stream};
 
 pub fn main() {
     let instream  = std::io::stdin();

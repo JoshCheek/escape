@@ -27,24 +27,9 @@ pub fn escape_char(c:char) -> String {
 
 use std::io::BufRead;
 use std::io::Write;
-use std::fmt;
 pub fn escape_stream(instream:&mut BufRead, outstream:&mut Write) {
-    let line        = &mut String::new();
-    let read_result = instream.read_line(line);
-    let line2       = escape_string(line.to_string());
-    let bytes       = line2.as_bytes();
-
-    outstream.write(b"\"");
-    outstream.write(bytes);
-    outstream.write(b"\"");
-
-    // let formatted = format_args!("Hello, {}!", "world");
-    //     // let to_print = fmt::format();
-    //     outstream.write_fmt(
-    //         formatted
-    //                        );
-
-    // for result in lock.lines() {
-    //   let line = result.unwrap();
-    // }
+    let input        = &mut String::new();
+    let read_result  = instream.read_line(input);
+    let escaped      = escape_string(input.to_string());
+    let write_result = write!(outstream, "\"{}\"\n", escaped);
 }
