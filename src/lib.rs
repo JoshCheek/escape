@@ -34,22 +34,10 @@ pub fn escape_stream(instream:&mut BufRead, outstream:&mut Write) {
 
     loop {
         input.clear();
+        let readres = instream.read_line(input);
+        (readres.is_err() || readres.ok() == Some(0)) && break;
 
-        let read_result = instream.read_line(input);
-        done_reading(read_result) && break;
-
-        let escaped      = escape_string(input.to_string());
-        let write_result = write!(outstream, "\"{}\"\n", escaped);
-        done_writing(write_result) && break;
+        let writeres = write!(outstream, "\"{}\"\n", escape_string(input.to_string()));
+        writeres.is_err() && break;
     }
-}
-
-use std::io::Result;
-
-fn done_reading(result:Result<usize>) -> bool {
-    result.is_err() || result.ok() == Some(0)
-}
-
-fn done_writing(result:Result<()>) -> bool {
-    result.is_err()
 }
