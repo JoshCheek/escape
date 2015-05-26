@@ -28,8 +28,23 @@ pub fn escape_char(c:char) -> String {
 use std::io::BufRead;
 use std::io::Write;
 pub fn escape_stream(instream:&mut BufRead, outstream:&mut Write) {
-    let input        = &mut String::new();
-    let read_result  = instream.read_line(input);
-    let escaped      = escape_string(input.to_string());
-    let write_result = write!(outstream, "\"{}\"\n", escaped);
+    let input = &mut String::new();
+
+    loop {
+        input.clear();
+
+        // break if there was an error, or no more input
+        match instream.read_line(input) {
+            Ok(n) => { if n == 0 { break; } }
+            _     => { break; }
+        }
+
+        let escaped = escape_string(input.to_string());
+
+        // break if we couldn't print
+        match write!(outstream, "\"{}\"\n", escaped) {
+            Err(_) => { break; }
+            _      => { /* noop */ }
+        }
+    }
 }
