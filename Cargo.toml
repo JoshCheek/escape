@@ -1,13 +1,9 @@
 [package]
-name = "escape"
-version = "0.0.1"
-authors = ["Josh Cheek <josh.cheek@gmail.com>"]
-
+name        = "escape"
+version     = "0.0.1"
+authors     = ["Josh Cheek <josh.cheek@gmail.com>"]
 description = "Escapes each line of stdin and prints it out"
-repository = "https://github.com/JoshCheek/inspect"
-readme = "./README.md"
-keywords = ["escape", "inspect"]
-
-license = "MIT"
-
-[dev-dependencies]
+repository  = "https://github.com/JoshCheek/inspect"
+readme      = "./README.md"
+keywords    = ["escape", "inspect"]
+license     = "MIT"
